@@ -1,0 +1,7 @@
+vim.symlink/bundle/
+.DS_Store
+.netrwhist
+plug.vim
+.nvimlog
+.tags
+node_modules
