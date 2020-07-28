@@ -5,10 +5,11 @@
   "description": "",
   "main": "package.json",
   "author": "Kerry Snyder <kerry@atmanaut.me>",
-  "license": "UNLICENSED",
+  "license": "to spill",
   "scripts": {
     "start": "sanity start",
     "dev": "sanity start",
+    "build": "sanity build public -y",
     "test": "sanity check"
   },
   "keywords": [
