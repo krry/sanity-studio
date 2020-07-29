@@ -1,7 +1,7 @@
 {
-  "name": "atmanauticms",
+  "name": "atmanautica-cms",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "package.json",
   "author": "Kerry Snyder <kerry@atmanaut.me>",
