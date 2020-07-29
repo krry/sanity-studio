@@ -5,7 +5,7 @@
   "description": "",
   "main": "package.json",
   "author": "Kerry Snyder <kerry@atmanaut.me>",
-  "license": "to spill",
+  "license": "CC-BY-NC-SA-4.0",
   "scripts": {
     "start": "sanity start",
     "dev": "sanity start",
