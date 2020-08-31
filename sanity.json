@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "atmanauticom"
+    "name": "atmanautica"
   },
   "api": {
     "projectId": "eclxc5mj",
@@ -30,6 +30,14 @@
     {
       "implements": "part:@sanity/production-preview/resolve-production-url",
       "path": "./utes/resolveProductionUrl.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./brand/fsLogo.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./styles/variables.css"
     }
   ]
 }
