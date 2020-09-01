@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Lato&family=Righteous&display=swap');
+
+:root {
+  /* Brand colors */
+  --brand-primary: hsl(302, 70%, 50%);
+  --brand-primary-inverted: hsl(196, 87%, 92%);
+  --brand-secondary: hsl(262, 81%, 47%);
+  --brand-secondary-inverted: var(--white);
+  /* Typography */
+  --body-font: "Lato", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --text-font: "Aleo", Georgia, serif;
+  --heading-font: "Righteous", "Futura", "Comic Sans MS", cursive;
+  --font-family-sans-serif: var(--body-font);
+  --font-size-base: 18px;
+  /* Main Navigation */
+  --main-navigation-color: var(--brand-secondary);
+  --main-navigation-color--inverted: var(--brand-secondary-inverted);
+}
+
+/* Atmanautica.com COLOR PALETTE
+
+$fore: hsl(196, 87%, 92%);
+$bkgd: hsl(262, 85%, 12%);
+$well: hsla(262, 89%, 21%, 0.7);
+$well-ful: hsl(262, 89%, 12%);
+$purp: hsl(262, 81%, 47%);
+$purp-on: hsl(262, 80%, 70%);
+$purp-old: hsl(262, 70%, 50%);
+$purp-new: hsl(262, 85%, 60%);
+$blue: hsl(196, 80%, 43%);
+$link-on: hsl(196, 80%, 70%);
+$link-old: hsl(196, 70%, 50%);
+$link-new: hsl(196, 85%, 60%);
+$pink: hsl(302, 80%, 43%);
+$pink-on: hsl(302, 80%, 70%);
+$pink-old: hsl(302, 70%, 50%);
+$pink-new: hsl(302, 85%, 60%);
+$green: hsl(87, 80%, 43%);
+$green-on: hsl(87, 80%, 70%);
+$green-old: hsl(87, 70%, 50%);
+$green-new: hsl(87, 85%, 60%);
+$white: hsl(196, 0%, 98%);
+$black: hsl(262, 0%, 2%);
+$mute: hsl(195, 10%, 50%);
+$mute-lite: hsl(195, 10%, 75%);
+$muted: hsla(196, 10%, 50%, 0.5);
+$shade: hsla(262, 43%, 10%, 0.7);
+$shady: hsla(262, 43%, 10%, 0.3);
+
+/* Atmanaut.me COLOR PALETTE
+
+$salmon:     hsl(340, 53%, 58%);
+$flesh:      hsl(340, 53%, 52%);
+$vermillion: hsl(9, 72%, 54%);
+$teal:       hsl(190, 96%, 33%);
+$teal-dark:        hsl(205, 73%, 6%);
+$dank:       hsl(206, 68%, 17%);
+$levi:       hsl(205, 93%, 39%);
+$cadet:      hsl(205, 87%, 30%);
+$peri:       hsl(205, 58%, 48%);
+$pastel-pink:      hsl(295, 51%, 75%);
+$mauve:            hsl(295, 32%, 48%);
+$violet:           hsl(295, 43%, 34%);
+$orchid:           hsl(295, 32%, 39%);
+$color-ink:        hsl(295, 33%, 19%);
+$white:            hsl(205, 23%, 84%);
+$extra-white:      hsl(205, 23%, 94%);
+$gray-light:       hsl(205, 13%, 48%);
+$gray:             hsl(205, 10%, 29%);
+$gray-dark:        hsl(205, 12%, 11%);
+$black:            hsl(225, 25%, 3%);
+
+/* FONTS
+ * base: Open Sans, sans-serif
+ * text: Aleo, serif
+ * title: Righteous, cursive
+ * code: Inconsolata, monospace
+
+$font-base: "Open Sans", system-ui, sans-serif;
+$font-text: "Aleo", serif;
+$font-title: "Righteous", cursive;
+$font-code: "Inconsolata", monospace;
+
+*/

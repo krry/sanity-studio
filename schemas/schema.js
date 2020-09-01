@@ -3,6 +3,14 @@ import createSchema from 'part:@sanity/base/schema-creator'
 
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
+import person from './documents/person'
+import post from './documents/post'
+import poem from './documents/poem'
+import idea from './documents/idea'
+import gig from './documents/gig'
+import project from './documents/project'
+import slice from './objects/slice'
+import skill from './documents/skill'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -12,74 +20,10 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
-    {
-      name: 'author',
-      type: 'document',
-      title: 'Author',
-      fields: [
-        {
-          name: 'name',
-          title: 'Name',
-          required: true,
-          type: 'string',
-        },
-        {
-          name: 'picture',
-          title: 'Picture',
-          type: 'image',
-        },
-      ],
-    },
-
-    {
-      name: 'post',
-      type: 'document',
-      title: 'Post',
-      fields: [
-        {
-          name: 'title',
-          title: 'Title',
-          required: true,
-          type: 'string',
-        },
-        {
-          name: 'content',
-          title: 'Content',
-          required: true,
-          type: 'array',
-          of: [{ type: 'block' }],
-        },
-        {
-          name: 'excerpt',
-          title: 'Excerpt',
-          type: 'string',
-        },
-        {
-          name: 'coverImage',
-          title: 'Cover Image',
-          type: 'image',
-        },
-        {
-          name: 'date',
-          title: 'Date',
-          required: true,
-          type: 'datetime',
-        },
-        {
-          name: 'author',
-          title: 'Author',
-          required: true,
-          description: 'Name thyself',
-          type: 'reference',
-          to: [{ type: 'author' }],
-        },
-        {
-          name: 'slug',
-          title: 'Slug',
-          description: 'https://www.atmanautica.com/slug',
-          type: 'slug',
-        },
-      ],
-    },
+    person,
+    post,
+    gig,
+    slice,
+    skill,
   ]),
 })
