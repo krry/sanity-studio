@@ -1,7 +1,10 @@
+import { GiFountainPen } from 'react-icons/gi'
+
 export default {
   name: "post",
-  type: "document",
   title: "Post",
+  type: "document",
+  icon: GiFountainPen,
   fields: [
     {
       name: "title",

@@ -1,7 +1,10 @@
+import { GiClayBrick } from 'react-icons/gi'
+
 export default {
   name: "gig",
   title: "Gig",
   type: "document",
+  icon: GiClayBrick,
   fieldsets: [
     { name: "client", title: "Client" },
     { name: "summary", title: "Summary" },
