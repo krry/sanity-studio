@@ -1,10 +1,10 @@
-import { GiClayBrick } from 'react-icons/gi'
+import { RiArtboardFill } from 'react-icons/ri'
 
 export default {
-  title: 'Project',
   name: 'project',
-  icon: GiClayBrick,
+  title: 'Project',
   type: 'document',
+  icon: RiArtboardFill,
   fields: [
     {
       name: 'title',

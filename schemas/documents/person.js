@@ -28,10 +28,4 @@ export default {
       of: [{ type: "block" }],
     },
   ],
-  preview: {
-    select: {
-      title: "name",
-      description: "bio",
-    },
-  },
 };

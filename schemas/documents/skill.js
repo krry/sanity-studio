@@ -1,7 +1,10 @@
+import { GiIceSkate } from 'react-icons/gi'
+
 export default {
   name: "skill",
   title: "Skill",
   type: "document",
+  icon: GiIceSkate,
   fields: [
     {
       name: "name",

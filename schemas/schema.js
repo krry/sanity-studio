@@ -7,8 +7,8 @@ import person from './documents/person'
 import post from './documents/post'
 import poem from './documents/poem'
 import idea from './documents/idea'
-import gig from './documents/gig'
 import project from './documents/project'
+import gig from './documents/gig'
 import slice from './objects/slice'
 import skill from './documents/skill'
 
@@ -22,6 +22,9 @@ export default createSchema({
     /* Your types here! */
     person,
     post,
+    poem,
+    idea,
+    project,
     gig,
     slice,
     skill,
