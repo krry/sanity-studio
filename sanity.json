@@ -33,7 +33,7 @@
     },
     {
       "implements": "part:@sanity/base/brand-logo",
-      "path": "./brand/fsLogo.js"
+      "path": "./brand/atmLogo.js"
     },
     {
       "implements": "part:@sanity/base/theme/variables/override-style",
