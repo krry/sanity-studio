@@ -1,15 +1,15 @@
-import { GiFountainPen } from 'react-icons/gi'
+import { GiPapers } from 'react-icons/gi'
 
 export default {
-  name: "post",
-  title: "Post",
+  name: "page",
+  title: "Page",
   type: "document",
-  icon: GiFountainPen,
+  icon: GiPapers,
   fields: [
     {
       name: "title",
-      title: "Title",
       type: "string",
+      title: "Title",
     },
     {
       name: "content",
@@ -17,34 +17,34 @@ export default {
     },
     {
       name: "excerpt",
-      title: "Excerpt",
       type: "string",
+      title: "Excerpt",
     },
     {
-      name: "coverImage",
-      title: "Cover Image",
+      name: "heroImage",
       type: "image",
+      title: "Hero Image",
       options: {
-        metadata: ["palette"],
+        metadata: ["palette"]
       },
     },
     {
       name: "date",
-      title: "Date",
       type: "datetime",
+      title: "Date",
     },
     {
       name: "author",
-      title: "Author",
-      description: "Name thyself",
       type: "reference",
       to: [{ type: "person" }],
+      title: "Author",
+      description: "Whodunnit",
     },
     {
       name: "slug",
+      type: "slug",
       title: "Slug",
       description: "https://www.example.com/slug",
-      type: "slug",
     },
   ],
 };

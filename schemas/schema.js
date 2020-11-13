@@ -11,6 +11,9 @@ import project from './documents/project'
 import gig from './documents/gig'
 import slice from './objects/slice'
 import skill from './documents/skill'
+import page from './documents/page'
+import editor from './objects/editor'
+import internalink from './objects/internalink'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,6 +23,8 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
+    internalink,
+    editor,
     person,
     post,
     poem,
@@ -28,5 +33,6 @@ export default createSchema({
     gig,
     slice,
     skill,
+    page,
   ]),
 })
