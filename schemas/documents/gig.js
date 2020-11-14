@@ -20,7 +20,7 @@ export default {
       name: "client",
       title: "Client",
       type: "reference",
-      to: [{ type: "person" }],
+      to: [{ type: "entity" }],
       fieldset: "client",
     },
     {

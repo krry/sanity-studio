@@ -4,6 +4,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import person from './documents/person'
+import entity from './documents/entity'
 import post from './documents/post'
 import poem from './documents/poem'
 import idea from './documents/idea'
@@ -26,6 +27,7 @@ export default createSchema({
     internalink,
     editor,
     person,
+    entity,
     post,
     poem,
     idea,
