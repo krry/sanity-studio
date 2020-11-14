@@ -29,6 +29,14 @@ export default {
       },
     },
     {
+      name: "ogImage",
+      title: "OG Image",
+      type: "image",
+      options: {
+        metadata: ["palette"],
+      },
+    },
+    {
       name: "date",
       title: "Date",
       type: "datetime",

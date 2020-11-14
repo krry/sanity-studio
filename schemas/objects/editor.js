@@ -34,8 +34,9 @@ export default {
   type: "array",
   title: "Editor",
   of: [
-    {
-      type: "block",
+    { type: "image" },
+    { type: "code" },
+    { type: "block",
       styles: [
         {title: 'Normal', value: 'normal'},
         {title: 'H1', value: 'h1'},
@@ -73,7 +74,5 @@ export default {
         ],
       },
     },
-    { type: "image" },
-    { type: "code" },
   ],
 };

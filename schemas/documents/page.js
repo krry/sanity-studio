@@ -12,6 +12,12 @@ export default {
       title: "Title",
     },
     {
+      name: "slug",
+      type: "slug",
+      title: "Slug",
+      description: "https://www.example.com/slug-for-page",
+    },
+    {
       name: "content",
       type: "editor",
     },
@@ -21,9 +27,9 @@ export default {
       title: "Excerpt",
     },
     {
-      name: "heroImage",
+      name: "coverImage",
       type: "image",
-      title: "Hero Image",
+      title: "Cover Image",
       options: {
         metadata: ["palette"]
       },
@@ -38,13 +44,7 @@ export default {
       type: "reference",
       to: [{ type: "person" }],
       title: "Author",
-      description: "Whodunnit",
-    },
-    {
-      name: "slug",
-      type: "slug",
-      title: "Slug",
-      description: "https://www.example.com/slug",
+      description: "whodunnit?",
     },
   ],
 };
