@@ -15,6 +15,7 @@ import skill from './documents/skill'
 import page from './documents/page'
 import editor from './objects/editor'
 import internalink from './objects/internalink'
+import link from './objects/link'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,6 +26,7 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     internalink,
+    link,
     editor,
     person,
     entity,

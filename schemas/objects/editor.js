@@ -68,6 +68,10 @@ export default {
         ],
         annotations: [
           {
+            name: "link",
+            type: "link",
+          },
+          {
             name: "internalink",
             type: "internalink",
           },

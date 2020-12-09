@@ -12,6 +12,12 @@ export default {
       type: "string",
     },
     {
+      name: "slug",
+      title: "Slug",
+      description: "https://www.example.com/slug",
+      type: "slug",
+    },
+    {
       name: "content",
       type: "editor",
     },
@@ -47,12 +53,6 @@ export default {
       description: "Name thyself",
       type: "reference",
       to: [{ type: "person" }],
-    },
-    {
-      name: "slug",
-      title: "Slug",
-      description: "https://www.example.com/slug",
-      type: "slug",
     },
   ],
 };
