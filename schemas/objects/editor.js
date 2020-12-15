@@ -27,7 +27,6 @@ export default {
   title: "Editor",
   of: [
     {
-      // TODO: flesh out image editor with url and photog fields
       type: "image",
       options: {
         hotspot: true,
