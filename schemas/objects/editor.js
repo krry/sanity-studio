@@ -2,7 +2,7 @@ import React from 'react'
 
 const TitleStyle = (props) => (
   <span style={{
-    fontFamily: "Garamond",
+    fontFamily: "serif",
     fontSize: "2em"
   }}>
     {props.children}
@@ -10,23 +10,15 @@ const TitleStyle = (props) => (
 );
 
 const CalloutStyle = (props) => (
-  <span style={{
-    backgroundColor: "cornsilk",
-    color: 'brown',
-    padding: "1em 1em 1em 3em",
-    position: "relative"
+  <aside className="callout" style={{
+    backgroundColor: "hsla(222, 95%, 90%, 0.2)",
+    display: 'block',
+    fontWeight: 'bold',
+    marginLeft: "1em",
+    padding: "1em",
   }}>
-    <span
-      contentEditable="false"
-      style={{
-      left: "1em",
-      margin: "0.5em 0",
-      position: "absolute",
-      top: "1em",
-      userSelect: "none",
-    }}>🔭</span>
     {props.children}
-  </span>
+  </aside>
 );
 
 export default {
@@ -34,7 +26,41 @@ export default {
   type: "array",
   title: "Editor",
   of: [
-    { type: "image" },
+    {
+      // TODO: flesh out image editor with url and photog fields
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+          options: {
+            isHighlighted: true
+          }
+        },
+        {
+          name: 'photog',
+          type: 'string',
+          title: 'Photog',
+          description: 'Name or handle',
+          options: {
+            isHighlighted: true
+          }
+        },
+        {
+          name: 'source',
+          type: 'string',
+          title: 'Source',
+          description: 'A link to the original',
+          options: {
+            isHighlighted: true
+          }
+        }
+      ]
+    },
     { type: "code" },
     { type: "block",
       styles: [
@@ -59,11 +85,11 @@ export default {
       ],
       marks: {
         decorators: [
-          { "title": "Strong", "value": "strong" },
-          { "title": "Emphasis", "value": "em" },
-          { "title": "Code", "value": "code" },
-          { "title": "Underline", "value": "underline" },
-          { "title": "Strike", "value": "strike-through" },
+          { title: "Strong", value: "strong" },
+          { title: "Emphasis", value: "em" },
+          { title: "Underline", value: "underline" },
+          { title: "Strike", value: "strike-through" },
+          { title: "Code", value: "code" },
           { title: 'Highlight', value: 'highlight' }
         ],
         annotations: [

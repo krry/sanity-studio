@@ -1,0 +1,10 @@
+:root {
+  --brand-primary: #248F27;
+  --brand-primary-inverted: #EDFCEE;
+  --brand-secondary: #4A1A9E;
+  --brand-light: #F5F5F5;
+  --brand-secondary-inverted: var(--brand-light);
+  --font-size-base: 16px;
+  --main-navigation-color: var(--brand-secondary);
+  --main-navigation-color-inverted: var(--brand-light);
+}

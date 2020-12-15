@@ -9,12 +9,22 @@
   },
   "plugins": [
     "@sanity/base",
-    "@sanity/components",
-    "@sanity/default-layout",
-    "@sanity/default-login",
     "@sanity/desk-tool",
+    "@sanity/code-input",
+    "@sanity/components",
+    "@sanity/color-input",
+    "@sanity/default-login",
+    "@sanity/default-layout",
     "@sanity/production-preview",
-    "@sanity/code-input"
+    "asset-source-unsplash",
+    "asset-source-thispersondoesnotexist",
+    "tabs",
+    "media",
+    "markdown",
+    "seo-tools",
+    "leaflet-input",
+    "dashboard-widget-cats",
+    "nyancat-spinner"
   ],
   "env": {
     "development": {
@@ -38,7 +48,11 @@
     },
     {
       "implements": "part:@sanity/base/theme/variables/override-style",
-      "path": "./styles/variables.css"
+      "path": "./styles/overrides.css"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
     }
   ]
 }

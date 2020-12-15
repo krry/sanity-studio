@@ -21,6 +21,11 @@ export default {
       },
     },
     {
+      name: 'brandColor',
+      type: 'color',
+      title: 'Brand color'
+    },
+    {
       name: "summary",
       title: "Summary",
       description: "who dis",
