@@ -15,7 +15,6 @@ import project from './documents/project'
 import gig from './documents/gig'
 import slice from './objects/slice'
 import skill from './documents/skill'
-import page from './documents/page'
 import comment from './documents/comment'
 import link from './objects/link'
 
@@ -40,7 +39,6 @@ export default createSchema({
     gig,
     slice,
     skill,
-    page,
     comment,
   ]),
 })
