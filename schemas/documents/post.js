@@ -5,31 +5,57 @@ export default {
   title: "Post",
   type: "document",
   icon: GiFountainPen,
+  fieldsets: [
+    { name: "title", title: "Title" },
+    { name: "body",  title: "Body" },
+    { name: "viz",   title: "Viz" },
+    { name: "meta",  title: "Meta" },
+  ],
   fields: [
     {
-      name: "title",
-      title: "Title",
       type: "string",
+      name: "title",
+      title: "Title"
+    },
+    {
+      name: "author",
+      type: "reference",
+      to: [{ type: "person" }],
+      title: "Author",
+      fieldset: "title",
+      description: "Who wrote this?",
     },
     {
       name: "slug",
-      title: "Slug",
-      description: "https://www.example.com/slug",
       type: "slug",
+      title: "Slug",
+      description: "https://www.example.com/slug-for-doc",
+      fieldset: "title",
+    },
+    {
+      name: "link",
+      type: "string",
+      title: "Link",
+      fieldset: "header",
+      description: "Label of links to this post",
+      fieldset: "title",
     },
     {
       name: "content",
       type: "editor",
+      fieldset: "body",
     },
     {
       name: "excerpt",
-      title: "Excerpt",
       type: "string",
+      title: "Excerpt",
+      fieldset: "body",
     },
     {
       name: "coverImage",
-      title: "Cover Image",
       type: "image",
+      title: "Cover Image",
+      fieldset: "viz",
       options: {
         metadata: ["palette"],
       },
@@ -38,26 +64,29 @@ export default {
       name: "ogImage",
       title: "OG Image",
       type: "image",
+      fieldset: "viz",
       options: {
         metadata: ["palette"],
       },
     },
     {
-      name: "date",
-      title: "Date",
-      type: "datetime",
+      name: "doc",
+      type: "reference",
+      to: [{ type: 'doc' }],
+      title: "Doc",
+      fieldset: "meta",
     },
     {
-      name: "author",
-      title: "Author",
-      description: "Name thyself",
-      type: "reference",
-      to: [{ type: "person" }],
+      name: "date",
+      type: "datetime",
+      title: "Date",
+      fieldset: "meta",
     },
     {
       name: 'seo',
       title: 'SEO',
       type: 'seo-tools', // use seo-tools type
+      fieldset: "meta",
       options: {
           baseUrl: 'https://easeness.business', // (REQUIRED) This is the baseUrl for your site
           baseUrl(doc) {
@@ -80,7 +109,7 @@ export default {
               // return 'page locale'; // (OPTIONAL) return page locale otherwise inferred from scrape
           // },
           // contentSelector: 'body' // (OPTIONAL) option to finetune where Yoast will look for the content. (only applicable for scraping without content function)
-      },
+      }
     }
-  ],
+  ]
 };
