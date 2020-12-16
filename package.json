@@ -1,7 +1,7 @@
 {
   "name": "cms",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "a sanity studio to organize atmanautica and its many projects",
   "main": "package.json",
   "author": "Kerry Snyder <kerry@atmanautica.com>",
