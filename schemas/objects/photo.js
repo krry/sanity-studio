@@ -1,12 +1,7 @@
-import { HiOutlineExternalLink } from 'react-icons/hi'
-
 export default {
-  name: 'link',
+  name: 'photo',
   type: 'object',
-  title: 'External link',
-  blockEditor: {
-    icon: HiOutlineExternalLink
-  },
+  title: 'Photo',
   fields: [
     {
       name: 'href',

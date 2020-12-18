@@ -1,107 +1,136 @@
 import React from 'react'
+import { AiOutlineHighlight } from 'react-icons/ai'
 
 const TitleStyle = (props) => (
-  <span style={{
-    fontFamily: "serif",
-    fontSize: "2em"
-  }}>
+  <span
+    style={{
+      fontFamily: 'serif',
+      fontWeight: 'bolder',
+      lineHeight: '1.25',
+      fontSize: '2rem',
+      marginBottom: '0.25em',
+    }}>
     {props.children}
   </span>
-);
+)
+
+const SubtitleStyle = (props) => (
+  <span
+    style={{
+      fontFamily: 'serif',
+      fontWeight: 'bolder',
+      fontSize: '1.5rem',
+      lineHeight: '1.25',
+      marginBottom: '0.25em',
+    }}>
+    {props.children}
+  </span>
+)
+
+const LeadStyle = (props) => (
+  <span
+    style={{
+      fontFamily: 'serif',
+      fontWeight: 'bolder',
+      fontSize: '1.25rem',
+      lineHeight: '1.25',
+      marginBottom: '0.25em',
+    }}>
+    {props.children}
+  </span>
+)
 
 const CalloutStyle = (props) => (
-  <aside className="callout" style={{
-    backgroundColor: "hsla(222, 95%, 90%, 0.2)",
-    display: 'block',
-    fontWeight: 'bold',
-    marginLeft: "1em",
-    padding: "1em",
-  }}>
-    {props.children}
+  <aside
+    style={{
+      backgroundColor: 'hsla(222, 95%, 90%, 0.3)',
+      display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'space-evenly',
+      padding: '1em',
+    }}>
+      <span
+        style={{
+          transform: 'scaleX(-1)',
+          userSelect: 'none',
+        }}
+        contentEditable={false}> 📢 </span>
+    <p style={{ flex: '1', padding: '0 0.5rem', margin: 0 }}>{props.children}</p>
   </aside>
-);
+)
+
+// Dinkus: A symbol that breaks paragraphs into sections, often an asterism ⁂ or a fleuron ❧
+const DinkusStyle = (props) => (
+  <p style={{
+    borderBottom: '1px solid currentColor',
+    borderTop: '1px solid currentColor',
+    borderOpacity: '0.5',
+    display: 'block',
+    padding: '0.25em 0',
+    textAlign: 'center',
+    width: '100%',
+  }}>{props.children}</p>
+)
 
 export default {
-  name: "editor",
-  type: "array",
-  title: "Editor",
+  name: 'editor',
+  type: 'array',
+  title: 'Editor',
   of: [
     {
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {hotspot: true},
       fields: [
-        {
-          name: 'caption',
-          type: 'string',
-          title: 'Caption',
-          options: {
-            isHighlighted: true
-          }
-        },
+        {name: 'caption', type: 'string', title: 'Caption', options: {isHighlighted: true}},
         {
           name: 'photog',
           type: 'string',
           title: 'Photog',
           description: 'Name or handle',
-          options: {
-            isHighlighted: true
-          }
+          options: {isHighlighted: true},
         },
         {
           name: 'source',
           type: 'string',
           title: 'Source',
           description: 'A link to the original',
-          options: {
-            isHighlighted: true
-          }
-        }
-      ]
+          options: {isHighlighted: true},
+        },
+      ],
     },
-    { type: "code" },
-    { type: "block",
+    { type: 'code',
+      name: 'code',
+      title: 'Code' },
+    {
+      type: 'block',
       styles: [
         {title: 'Normal', value: 'normal'},
-        {title: 'H1', value: 'h1'},
-        {title: 'H2', value: 'h2'},
-        {title: 'H3', value: 'h3'},
-        {title: 'H4', value: 'h4'},
-        {title: 'H5', value: 'h5'},
-        {title: 'H6', value: 'h6'},
+        {title: 'h1 Title', value: 'h1', blockEditor: {render: TitleStyle}},
+        {title: 'h2 Subtitle', value: 'h2', blockEditor: {render: SubtitleStyle}},
+        {title: 'h3 Lead', value: 'h3', blockEditor: {render: LeadStyle}},
+        {title: 'Dinkus', value: 'hr', blockEditor: {render: DinkusStyle}},
         {title: 'Quote', value: 'blockquote'},
-        {
-          title: 'Callout',
-          value: 'callout',
-          blockEditor: { render: CalloutStyle }
-        },
-        {
-          title: "Title",
-          value: "title",
-          blockEditor: { render: TitleStyle },
-        },
+        {title: 'Callout', value: 'aside', blockEditor: {render: CalloutStyle}},
+        {title: 'h4 Segue', value: 'h4'},
+        {title: 'h5 Key', value: 'h5'},
+        {title: 'h6 Subkey', value: 'h6'},
       ],
       marks: {
         decorators: [
-          { title: "Strong", value: "strong" },
-          { title: "Emphasis", value: "em" },
-          { title: "Underline", value: "underline" },
-          { title: "Strike", value: "strike-through" },
-          { title: "Code", value: "code" },
-          { title: 'Highlight', value: 'highlight' }
+          {title: 'Strong', value: 'strong'},
+          {title: 'Emphasis', value: 'em'},
+          {title: 'Underline', value: 'underline'},
+          {title: 'Strike', value: 'strike-through'},
+          {title: 'Code', value: 'code'},
+          {title: 'Highlight', value: 'highlight', blockEditor: {icon: AiOutlineHighlight},},
         ],
         annotations: [
-          {
-            name: "link",
-            type: "link",
-          },
-          {
-            name: "internalink",
-            type: "internalink",
-          },
+          {name: 'internalink', type: 'internalink'},
+          {name: 'link', type: 'link'},
         ],
       },
     },
   ],
-};
+}

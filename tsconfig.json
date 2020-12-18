@@ -1,5 +1,5 @@
 {
-  "include": ["./node_modules/@sanity/base/types/**/*.ts", "./**/*.ts", "./**/*.tsx"],
+  "include": ["./node_modules/@sanity/base/types/**/*.ts", "./**/*.ts", "./**/*.tsx", "utes/migrate.js"],
   "compilerOptions": {
     "jsx": "react"
   }

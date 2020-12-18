@@ -3,17 +3,17 @@ import { GiCondorEmblem } from 'react-icons/gi'
 export default {
   name: 'comment',
   type: 'document',
-  icon: GiCondorEmblem,
   title: 'Comment',
+  icon: GiCondorEmblem,
   fields: [
     {
       name: 'name',
       type: 'string',
     },
     {
-      title: 'Approved',
       name: 'approved',
       type: 'boolean',
+      title: 'Approved',
       description: "Comments won't show on the site without approval"
     },
     {
@@ -25,10 +25,10 @@ export default {
       type: 'text',
     },
     {
-      name: 'doc',
+      name: 'post',
       type: 'reference',
       to: [
-        {type: 'doc'}
+        {type: 'post'}
       ]
     }
   ],
@@ -36,11 +36,11 @@ export default {
     select: {
       name: 'name',
       comment: 'comment',
-      doc: 'doc.title'
+      post: 'post.title'
     },
-    prepare({name, comment, doc}) {
+    prepare({name, comment, post}) {
       return {
-        title: `${name} on ${doc}`,
+        title: `${name} on ${post}`,
         subtitle: comment
       }
     }
