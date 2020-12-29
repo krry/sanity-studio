@@ -14,6 +14,11 @@ export default {
       title: 'URL'
     },
     {
+      name: 'text',
+      type: 'string',
+      title: 'link to'
+    },
+    {
       title: 'Open in new tab',
       name: 'blank',
       description: 'Read https://css-tricks.com/use-target_blank/',

@@ -61,7 +61,7 @@ const CalloutStyle = (props) => (
 
 // Dinkus: A symbol that breaks paragraphs into sections, often an asterism ⁂ or a fleuron ❧
 const DinkusStyle = (props) => (
-  <p style={{
+  <span style={{
     borderBottom: '1px solid currentColor',
     borderTop: '1px solid currentColor',
     borderOpacity: '0.5',
@@ -69,7 +69,7 @@ const DinkusStyle = (props) => (
     padding: '0.25em 0',
     textAlign: 'center',
     width: '100%',
-  }}>{props.children}</p>
+  }}>{props.children}</span>
 )
 
 export default {
@@ -77,10 +77,9 @@ export default {
   type: 'array',
   title: 'Editor',
   of: [
-    {
+    { type: 'image',
       name: 'image',
       title: 'Image',
-      type: 'image',
       options: {hotspot: true},
       fields: [
         {name: 'caption', type: 'string', title: 'Caption', options: {isHighlighted: true}},
@@ -97,21 +96,17 @@ export default {
           title: 'Source',
           description: 'A link to the original',
           options: {isHighlighted: true},
-        },
+        }
       ],
     },
-    { type: 'code',
-      name: 'code',
-      title: 'Code' },
-    {
-      type: 'block',
+    { type: 'block',
       styles: [
         {title: 'Normal', value: 'normal'},
         {title: 'h1 Title', value: 'h1', blockEditor: {render: TitleStyle}},
         {title: 'h2 Subtitle', value: 'h2', blockEditor: {render: SubtitleStyle}},
         {title: 'h3 Lead', value: 'h3', blockEditor: {render: LeadStyle}},
-        {title: 'Dinkus', value: 'hr', blockEditor: {render: DinkusStyle}},
         {title: 'Quote', value: 'blockquote'},
+        {title: 'Dinkus', value: 'hr', blockEditor: {render: DinkusStyle}},
         {title: 'Callout', value: 'aside', blockEditor: {render: CalloutStyle}},
         {title: 'h4 Segue', value: 'h4'},
         {title: 'h5 Key', value: 'h5'},
@@ -131,6 +126,16 @@ export default {
           {name: 'link', type: 'link'},
         ],
       },
+    },
+    { type: 'linebreak',
+      styles: [
+        {title: 'Line Break', value: 'lineBreak'},
+        {title: 'Read More', value: 'readMore'},
+      ],
+    },
+    { type: 'code',
+      name: 'code',
+      title: 'Code'
     },
   ],
 }

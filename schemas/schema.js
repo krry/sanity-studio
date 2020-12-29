@@ -17,6 +17,7 @@ import slice from './objects/slice'
 import skill from './documents/skill'
 import comment from './documents/comment'
 import link from './objects/link'
+import linebreak from './objects/linebreak'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -40,5 +41,6 @@ export default createSchema({
     slice,
     skill,
     comment,
+    linebreak,
   ]),
 })

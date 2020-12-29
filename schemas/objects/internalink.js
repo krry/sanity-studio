@@ -16,5 +16,10 @@ export default {
         { type: "post" },
       ],
     },
+    {
+      name: 'text',
+      type: 'string',
+      title: 'link to'
+    },
   ],
 };
