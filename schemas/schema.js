@@ -1,8 +1,6 @@
-// First, we must import the schema creator
 import createSchema from 'part:@sanity/base/schema-creator'
-
-// Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
+
 import editor from './objects/editor'
 import internalink from './objects/internalink'
 import doc from './documents/doc'
@@ -13,6 +11,7 @@ import poem from './documents/poem'
 import idea from './documents/idea'
 import project from './documents/project'
 import gig from './documents/gig'
+import hexagram, {Line} from './documents/hexagram'
 import slice from './objects/slice'
 import skill from './documents/skill'
 import comment from './documents/comment'
@@ -38,6 +37,7 @@ export default createSchema({
     idea,
     project,
     gig,
+    hexagram,
     slice,
     skill,
     comment,
